@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">scrolltable</string>
+    <string name="touch_reload">触摸屏幕重新加载</string>
+    <string name="error_net">网络异常</string>
+</resources>

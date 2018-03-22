@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ScrollorTableView</string>
+
+
+    <string-array name="table_title">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+        <item>item5</item>
+        <item>item6</item>
+    </string-array>
+</resources>

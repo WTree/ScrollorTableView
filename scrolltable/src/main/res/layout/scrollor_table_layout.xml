@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:background="#f6f6f6"
+            android:id="@+id/tv_left_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:text="表头"
+            android:paddingLeft="10dp"
+            android:textColor="#777777" />
+
+        <com.wtree.scrolltable.SyncHorizontalScrollView
+            android:id="@+id/scrollView_title"
+            android:scrollbars="none"
+            android:background="#eeeeee"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--在代码里面动态添加 right title-->
+            <LinearLayout
+                android:id="@+id/lin_right_title_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+
+        </com.wtree.scrolltable.SyncHorizontalScrollView>
+
+    </LinearLayout>
+
+
+    <!--两个列表的滑动事件在这里-->
+
+
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_marginTop="36dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <com.wtree.scrolltable.LeftListView
+                android:overScrollMode="never"
+
+                android:id="@+id/listview_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--这个Scroll和 right title 联动-->
+            <com.wtree.scrolltable.LockHorizontalScrollView
+                android:id="@+id/scrollView_list"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.wtree.scrolltable.MyExpandRecycleView
+                    android:id="@+id/listview_right"
+                    android:overScrollMode="never"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.wtree.scrolltable.LockHorizontalScrollView>
+
+
+
+
+        </RelativeLayout>
+
+</FrameLayout>
